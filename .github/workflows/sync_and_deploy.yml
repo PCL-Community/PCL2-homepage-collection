@@ -28,6 +28,14 @@ jobs:
     - name: Run main.py
       run: python main.py
 
+    - name: Commit and push public folder
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add public
+        git commit -m 'Update public'
+        git push origin main
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:

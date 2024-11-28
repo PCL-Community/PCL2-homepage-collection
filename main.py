@@ -99,12 +99,12 @@ def sync_homepage(homepage: HomepageInfo):
 
 if __name__ == "__main__":
     homepage_list = read_config()
-    if len(homepage_list) == 0:
-        logger.warning("主页列表为空，终止同步")
-        sys.exit(1)
     public_dir = "public"
     if not os.path.exists(public_dir):
         os.makedirs(public_dir)
+    if len(homepage_list) == 0:
+        logger.warning("主页列表为空，终止同步")
+        sys.exit(1)
     logger.info(f"开始同步主页文件，共 {len(homepage_list)} 个主页需要同步")
     for homepage in homepage_list:
         sync_homepage(homepage)
