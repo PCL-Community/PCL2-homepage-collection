@@ -1,9 +1,6 @@
 # PCL2-homepage-collection
 托管 PCL2 自定义主页文件
 
-> [!WARNING]
-> 正在施工
-
 **此托管与 PCL2 官方无关，此处收录与 PCL2 收录无关**
 
 为了降低自定义主页的成本和维护门槛（但并非质量门槛，本 collection 有权拒绝低质主页），本 collection 将维护一个统一的 CDN 供主页作者使用，无需为维护和潜在的攻击风险担心。
