@@ -31,7 +31,18 @@ jobs:
     - name: Run main.py
       run: python main.py
 
+    - name: Check for changes
+      id: check_changes
+      run: |
+        if git diff --quiet public; then
+          echo "No changes made"
+          echo "::set-output name=changes::false"
+        else
+          echo "Changes detected"
+          echo "::set-output name=changes::true"
+    
     - name: Commit and push public folder
+      if: steps.check_changes.outputs.changes == 'true'
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
@@ -40,6 +51,7 @@ jobs:
         git push origin main
 
     - name: Deploy to GitHub Pages
+      if: steps.check_changes.outputs.changes == 'true'
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
