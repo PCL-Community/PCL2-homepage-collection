@@ -36,10 +36,11 @@ jobs:
       run: |
         if git diff --quiet public; then
           echo "No changes made"
-          echo "::set-output name=changes::false"
+          echo "changes=false" >> $GITHUB_OUTPUT
         else
           echo "Changes detected"
-          echo "::set-output name=changes::true"
+          echo "changes=true" >> $GITHUB_OUTPUT
+        fi
     
     - name: Commit and push public folder
       if: steps.check_changes.outputs.changes == 'true'
