@@ -3,7 +3,7 @@
 
 **此托管与 PCL2 官方无关，此处收录与 PCL2 收录无关**
 
-为了降低自定义主页的成本和维护门槛（但并非质量门槛，本 collection 有权拒绝低质主页），本 collection 将维护一个统一的 CDN 供主页作者使用，无需为维护和潜在的攻击风险担心。
+为了降低自定义主页的维护成本（但并非质量门槛，本 collection 有权拒绝低质主页），本 collection 将维护一个统一的 CDN 供主页作者使用，无需为维护和潜在的攻击风险担心。
 
 主页作者可以提供一个可以被 GitHub Action 访问的 url（例如 GitHub 文件、最新 Release 直链），并在 issue 申请收录（参考 [#2528](https://github.com/Hex-Dragon/PCL2/discussions/2528) 提供信息）。
 
