@@ -27,11 +27,11 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
     </Setter>
 </Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
 <Style x:Key="ColoredPara" TargetType="Paragraph"><Setter Property="FontSize" Value="14.5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Margin" Value="0,10,0,10"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
 <Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,5"/><Setter Property="Margin" Value="0,5"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <ControlTemplate  x:Key="Separator" TargetType="ContentControl">
@@ -198,7 +198,7 @@ M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 
       </local:MyComboBox>
         <local:MyButton HorizontalAlignment="Center" Width="80"
             Grid.Column="1" Text="打开→" EventType="打开帮助" 
-            EventData="{Binding Path=Text,ElementName=updatebox,StringFormat=https://pclhomeplazaoss.lingyunawa.top:26994/d/Homepages/Joker2184/{0}.json}"/>
+            EventData="{Binding Path=Text,ElementName=updatebox,StringFormat=https://pclhomeplazaoss.lingyunawa.top:26994/d/Homepages/Joker2184/VerSave/{0}.json}"/>
     </Grid>
     </StackPanel>
 </local:MyCard>
