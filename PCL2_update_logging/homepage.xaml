@@ -35,6 +35,7 @@ M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
 <Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,5"/><Setter Property="Margin" Value="0,5"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
 <Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
@@ -42,6 +43,7 @@ M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 
 <Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 <Style TargetType="ListItem"><Setter Property="Foreground" Value="Black"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style x:Key="warningQuote" BasedOn="{StaticResource Quote}" TargetType="Section"><Setter Property="BorderBrush" Value="#DDBB44"/><Setter Property="Background" Value="#33DDBB44"/></Style>
 <ControlTemplate  x:Key="Separator" TargetType="ContentControl">
   <Grid Margin="0,10">
     <Grid.ColumnDefinitions>
@@ -56,7 +58,28 @@ M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 
 </ControlTemplate>
 
 </StackPanel.Resources>
-<local:MyCard Title="📰 2.8.12" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}" >
+<local:MyCard Title="📰 CEVersion" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
+<StackPanel Style="{StaticResource ContentStack}">
+<FlowDocumentScrollViewer >
+<FlowDocument>
+<Paragraph Style="{StaticResource H1}">📢PCL2 社区版测试上线运行</Paragraph><Section Style="{StaticResource warningQuote}">
+  <Paragraph FontWeight="Bold">
+    警告
+    <Paragraph.Foreground>
+      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
+    </Paragraph.Foreground>
+  </Paragraph>
+  
+<Paragraph><LineBreak/>
+PCL2 社区版并非由上游开发者龙腾猫跃开发与管理，且与龙腾猫跃本人无关。使用 PCL2 社区版带来的一切风险请您自行承担。  </Paragraph>
+<Paragraph>PCL2 社区版下载不需要您支付任何费用。PCL-Community 组织及其成员<Bold>始终建议您使用官方版 PCL2</Bold>。  </Paragraph>
+<Paragraph>社区版出现问题请向社区版仓库反馈，不要向主线仓库反馈！</Paragraph>
+
+</Section><Paragraph Style="{StaticResource H2}">介绍</Paragraph><Paragraph>PCL2 Community Edition（PCL2 社区版，或 PCL2-CE，简称 CE）是由 PCL-Community 及其成员共同开发的 PCL2 下游分支，包括了主线暂未制作的功能和改进。由于个人开发水平存在较大差距，这些社区制作的功能可能存在一定瑕疵且稳定性较低。</Paragraph><Paragraph>关于数据：社区版数据和主线不互通，独立存储于注册表中。</Paragraph><Paragraph>关于版本号：社区版版本号并不与官方版严格对应，但会在 Release 的发布说明和启动器内关于信息中附上对应的主线版本。社区版会在主线更新时同步一次代码。</Paragraph><Paragraph>欢迎大家试试看！</Paragraph><Paragraph>你可以在 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://github.com/PCL-Community/PCL2-CE">这里</local:MyTextButton></Underline> 获取社区版源代码和正式发布版本。</Paragraph>
+</FlowDocument>
+</FlowDocumentScrollViewer>
+</StackPanel>
+</local:MyCard><local:MyCard Title="📰 2.8.12" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-20,0,0">
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,10">
