@@ -5,17 +5,6 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <StackPanel.Triggers>
 </StackPanel.Triggers>
 <StackPanel.Resources>
-<Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/></Style>
-<sys:String   x:Key="GithubIcon">
-M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 0 0 363.52 938.666667c23.466667 4.266667 32-9.813333 32-22.186667v-78.08c-130.56 27.733333-158.293333-61.44-158.293333-61.44a122.026667 122.026667 0 0 0-52.053334-67.413333c-42.666667-28.16 3.413333-27.733333 3.413334-27.733334a98.56 98.56 0 0 1 71.68 47.36 101.12 101.12 0 0 0 136.533333 37.973334 99.413333 99.413333 0 0 1 29.866667-61.44c-104.106667-11.52-213.333333-50.773333-213.333334-226.986667a177.066667 177.066667 0 0 1 47.36-124.16 161.28 161.28 0 0 1 4.693334-121.173333s39.68-12.373333 128 46.933333a455.68 455.68 0 0 1 234.666666 0c89.6-59.306667 128-46.933333 128-46.933333a161.28 161.28 0 0 1 4.693334 121.173333A177.066667 177.066667 0 0 1 810.666667 477.866667c0 176.64-110.08 215.466667-213.333334 226.986666a106.666667 106.666667 0 0 1 32 85.333334v125.866666c0 14.933333 8.533333 26.88 32 22.186667A460.8 460.8 0 0 0 981.333333 502.186667 464.64 464.64 0 0 0 512 42.666667</sys:String>
-<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
-<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
-<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
-<Style x:Key="ColoredPara" TargetType="Paragraph"><Setter Property="FontSize" Value="14.5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Margin" Value="0,10,0,10"/></Style>
-<Style x:Key="ColoredListItemPara" TargetType="Paragraph"><Setter Property="FontSize" Value="14.5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="LineHeight" Value="10"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style TargetType="ListItem"><Setter Property="Foreground" Value="Black"/><Setter Property="Margin" Value="0,4"/></Style>
 <Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <ControlTemplate  x:Key="Separator" TargetType="ContentControl">
   <Grid Margin="0,10">
@@ -30,10 +19,17 @@ M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 
   </Grid>
 </ControlTemplate>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
-<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<sys:String   x:Key="GithubIcon">
+M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 0 0 363.52 938.666667c23.466667 4.266667 32-9.813333 32-22.186667v-78.08c-130.56 27.733333-158.293333-61.44-158.293333-61.44a122.026667 122.026667 0 0 0-52.053334-67.413333c-42.666667-28.16 3.413333-27.733333 3.413334-27.733334a98.56 98.56 0 0 1 71.68 47.36 101.12 101.12 0 0 0 136.533333 37.973334 99.413333 99.413333 0 0 1 29.866667-61.44c-104.106667-11.52-213.333333-50.773333-213.333334-226.986667a177.066667 177.066667 0 0 1 47.36-124.16 161.28 161.28 0 0 1 4.693334-121.173333s39.68-12.373333 128 46.933333a455.68 455.68 0 0 1 234.666666 0c89.6-59.306667 128-46.933333 128-46.933333a161.28 161.28 0 0 1 4.693334 121.173333A177.066667 177.066667 0 0 1 810.666667 477.866667c0 176.64-110.08 215.466667-213.333334 226.986666a106.666667 106.666667 0 0 1 32 85.333334v125.866666c0 14.933333 8.533333 26.88 32 22.186667A460.8 460.8 0 0 0 981.333333 502.186667 464.64 464.64 0 0 0 512 42.666667</sys:String>
+<Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/></Style>
+<Style x:Key="warningQuote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="#DDBB44"/><Setter Property="Padding" Value="10,5"/><Setter Property="Margin" Value="0,5"/><Setter Property="Background" Value="#33DDBB44"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style x:Key="ColoredListItemPara" TargetType="Paragraph"><Setter Property="FontSize" Value="14.5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="LineHeight" Value="10"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 <Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="ColoredPara" TargetType="Paragraph"><Setter Property="FontSize" Value="14.5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Margin" Value="0,10,0,10"/></Style>
 <Style TargetType="List"><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/><Setter Property="Margin" Value="20,6,0,6"/><Setter Property="MarkerStyle" Value="1"/><Setter Property="Padding" Value="0"/></Style>
+<Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -52,10 +48,14 @@ M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 
         </Setter.Value>
     </Setter>
 </Style>
+<Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
+<Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="Black"/></Style>
+<Style x:Key="H4" TargetType="Paragraph"><Setter Property="FontSize" Value="16"/><Setter Property="Margin" Value="0,10,0,1"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
+<Style TargetType="Paragraph"><Setter Property="LineHeight" Value="12"/><Setter Property="TextIndent" Value="0"/><Setter Property="Margin" Value="0,8"/></Style>
 <Style x:Key="Hr" TargetType="Section"><Setter Property="Margin" Value="0,4,0,0"/><Setter Property="BorderThickness" Value="0,1.5,0,0"/><Setter Property="BorderBrush" Value="{StaticResource ColorBrush4}"/><Setter Property="FontSize" Value="4"/></Style>
-<Style x:Key="warningQuote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="#DDBB44"/><Setter Property="Padding" Value="10,5"/><Setter Property="Margin" Value="0,5"/><Setter Property="Background" Value="#33DDBB44"/></Style>
+<Style TargetType="ListItem"><Setter Property="Foreground" Value="Black"/><Setter Property="Margin" Value="0,4"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
 <Style x:Key="Quote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush4}"/><Setter Property="Padding" Value="10,5"/><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard Title="📰 NextVersionNews" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
@@ -217,7 +217,7 @@ M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 
     </StackPanel>
 </local:MyCard>
 <ContentControl Content="周 边 新 闻" Template="{StaticResource Separator}"/>
-<local:MyCard Title="📰 CEVersion" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" Margin="0,0,0,15">
+<local:MyCard Title="📰 CEVersion" CanSwap="True" IsSwaped="True" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <FlowDocumentScrollViewer >
 <FlowDocument>
@@ -235,7 +235,7 @@ PCL2 社区版并非由上游开发者龙腾猫跃开发与管理，且与龙腾
 <Paragraph>社区版出现问题请向社区版仓库反馈，不要向主线仓库反馈！</Paragraph>
 <Paragraph>PCL2 社区版可能于未来放弃对 Windows 10 以下版本系统的支持，您可能需要升级到 Windows 10 或更高版本以继续使用。</Paragraph>
 
-</Section><Paragraph Style="{StaticResource H2}">介绍</Paragraph><Paragraph>PCL2 Community Edition（PCL2 社区版，或 PCL2-CE，简称 CE）是由 PCL-Community 及其成员共同开发的 PCL2 下游分支，包括了主线暂未制作的功能和改进。由于个人开发水平存在较大差距，这些社区制作的功能可能存在一定瑕疵且稳定性较低。</Paragraph><Paragraph>关于数据：社区版数据和主线不互通，独立存储于注册表中。</Paragraph><Paragraph>关于版本号：社区版版本号并不与官方版严格对应，但会在 Release 的发布说明和启动器内关于信息中附上对应的主线版本。社区版会在主线更新时同步一次代码。</Paragraph><Paragraph>欢迎大家试试看！</Paragraph><Paragraph>功能速览宣传片：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.bilibili.com/video/BV1w5wheQEAy">B站@鸽秋咕咕咕</local:MyTextButton></Underline> </Paragraph><Paragraph>你可以在 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://github.com/PCL-Community/PCL2-CE">这里</local:MyTextButton></Underline> 获取社区版源代码和正式发布版本。</Paragraph><Paragraph>如果登录不了GitHub 用户群也提供了备用下载（不保证为最新版本）</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://lzasn.xyz:521/Software/Windows/PCL2-CE">Lzasn</local:MyTextButton></Underline></Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="http://swanet.cn:5244/PCL2-CE">myxxr-A</local:MyTextButton></Underline></Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="http://106.14.45.80:5244/PCL2-CE">myxxr-B</local:MyTextButton></Underline></Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://ghproxy.cn/https://github.com/PCL-Community/PCL2-CE/releases/latest/download/PCL2_CE.exe">Ad-closeNN</local:MyTextButton></Underline></Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://pclhomeplazaoss.lingyunawa.top:26993/Homepages/CESAVE">PCLHomeplazaOSS</local:MyTextButton></Underline></Paragraph>
+</Section><Paragraph Style="{StaticResource H2}">介绍</Paragraph><Paragraph>PCL2 Community Edition（PCL2 社区版，或 PCL2-CE，简称 CE）是由 PCL-Community 及其成员共同开发的 PCL2 下游分支，包括了主线暂未制作的功能和改进。由于个人开发水平存在较大差距，这些社区制作的功能可能存在一定瑕疵且稳定性较低。</Paragraph><Paragraph>关于数据：社区版数据和主线不互通，独立存储于注册表中。</Paragraph><Paragraph>关于版本号：社区版版本号并不与官方版严格对应，但会在 Release 的发布说明和启动器内关于信息中附上对应的主线版本。社区版会在主线更新时同步一次代码。</Paragraph><Paragraph>欢迎大家试试看！</Paragraph><Paragraph>功能速览宣传片：<Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://www.bilibili.com/video/BV1w5wheQEAy">B站@鸽秋咕咕咕</local:MyTextButton></Underline> </Paragraph><Paragraph>你可以在 <Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://github.com/PCL-Community/PCL2-CE">这里</local:MyTextButton></Underline> 获取社区版源代码和正式发布版本。</Paragraph><Paragraph>如果登录不了GitHub 用户群也提供了备用下载（不保证为最新版本）</Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://lzasn.xyz:521/Software/Windows/PCL2-CE">Lzasn</local:MyTextButton></Underline></Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="http://swanet.cn:5244/PCL2-CE">myxxr-A</local:MyTextButton></Underline></Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="http://106.14.45.80:5244/PCL2-CE">myxxr-B</local:MyTextButton></Underline></Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://ghproxy.cn/https://github.com/PCL-Community/PCL2-CE/releases/latest/download/PCL2_CE.exe">ghproxy</local:MyTextButton></Underline></Paragraph><Paragraph><Underline><local:MyTextButton Margin="0,0,0,-2" EventType="打开网页" EventData="https://pclhomeplazaoss.lingyunawa.top:26993/Homepages/CESAVE">PCLHomeplazaOSS</local:MyTextButton></Underline></Paragraph>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
