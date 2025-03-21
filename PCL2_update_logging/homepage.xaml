@@ -12,25 +12,12 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
 <Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/></Style>
+<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="noteQuote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="#4455AA"/><Setter Property="Padding" Value="10,5"/><Setter Property="Margin" Value="0,5"/><Setter Property="Background" Value="#334455AA"/></Style>
+<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
 <sys:String   x:Key="GithubIcon">
 M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 0 0 363.52 938.666667c23.466667 4.266667 32-9.813333 32-22.186667v-78.08c-130.56 27.733333-158.293333-61.44-158.293333-61.44a122.026667 122.026667 0 0 0-52.053334-67.413333c-42.666667-28.16 3.413333-27.733333 3.413334-27.733334a98.56 98.56 0 0 1 71.68 47.36 101.12 101.12 0 0 0 136.533333 37.973334 99.413333 99.413333 0 0 1 29.866667-61.44c-104.106667-11.52-213.333333-50.773333-213.333334-226.986667a177.066667 177.066667 0 0 1 47.36-124.16 161.28 161.28 0 0 1 4.693334-121.173333s39.68-12.373333 128 46.933333a455.68 455.68 0 0 1 234.666666 0c89.6-59.306667 128-46.933333 128-46.933333a161.28 161.28 0 0 1 4.693334 121.173333A177.066667 177.066667 0 0 1 810.666667 477.866667c0 176.64-110.08 215.466667-213.333334 226.986666a106.666667 106.666667 0 0 1 32 85.333334v125.866666c0 14.933333 8.533333 26.88 32 22.186667A460.8 460.8 0 0 0 981.333333 502.186667 464.64 464.64 0 0 0 512 42.666667</sys:String>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<ControlTemplate  x:Key="Separator" TargetType="ContentControl">
-  <Grid Margin="0,10">
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="1*" />
-      <ColumnDefinition Width="100" />
-      <ColumnDefinition Width="1*" />
-    </Grid.ColumnDefinitions>
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
-    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
-    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
-  </Grid>
-</ControlTemplate>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
-<Style x:Key="H1" TargetType="Paragraph"><Setter Property="FontSize" Value="24"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -51,16 +38,31 @@ M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 
     </Setter>
 </Style>
 <Style x:Key="ColoredListItemPara" TargetType="Paragraph"><Setter Property="FontSize" Value="14.5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="LineHeight" Value="10"/><Setter Property="TextIndent" Value="0"/></Style>
-<Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
+<ControlTemplate  x:Key="Separator" TargetType="ContentControl">
+  <Grid Margin="0,10">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*" />
+      <ColumnDefinition Width="100" />
+      <ColumnDefinition Width="1*" />
+    </Grid.ColumnDefinitions>
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="0" />
+    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" FontSize="15" Foreground="{DynamicResource ColorBrush4}" Grid.Column="1" VerticalAlignment="Center" />
+    <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.5" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="2" />
+  </Grid>
+</ControlTemplate>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="tipQuote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="#44AA55"/><Setter Property="Padding" Value="10,5"/><Setter Property="Margin" Value="0,5"/><Setter Property="Background" Value="#3344AA55"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
 
 </StackPanel.Resources>
-<local:MyCard Title="📰 2.9.1" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}" >
+<local:MyCard Title="📰 2.9.2" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}" >
 <StackPanel Style="{StaticResource ContentStack}">
 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,-20,0,0">
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,10">
         <TextBlock Text="PCL 新闻速报" FontSize="32" FontWeight="Bold" Foreground="{DynamicResource ColorBrush3}" HorizontalAlignment="Center" />
         <Border Background="{DynamicResource ColorBrush4}" Opacity="0.8" CornerRadius="3" Padding="6,2" HorizontalAlignment="Center" Margin="0,5,0,0">
-            <TextBlock Text="PCL 现更新至2.9.1" FontSize="16" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" />
+            <TextBlock Text="PCL 现更新至2.9.2" FontSize="16" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" />
         </Border>
     </StackPanel>
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="8,6,8,2">
@@ -73,18 +75,18 @@ M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 
         <Path Margin="4,0" Width="14" Height="14" Fill="{DynamicResource ColorBrush4}"
               Stretch="Uniform"
               Data="M716.4 110.137c0-18.753-14.72-33.473-33.472-33.473-18.753 0-33.473 14.72-33.473 33.473v33.473h66.993v-33.473zm-334.87 0c0-18.753-14.72-33.473-33.473-33.473s-33.52 14.72-33.52 33.473v33.473h66.993v-33.473zm468.81 33.52H716.4v100.465c0 18.753-14.72 33.473-33.472 33.473a33.145 33.145 0 01-33.473-33.473V143.657H381.53v100.465c0 18.753-14.72 33.473-33.473 33.473a33.145 33.145 0 01-33.473-33.473V143.657H180.6A134.314 134.314 0 0046.66 277.595v535.756A134.314 134.314 0 00180.6 947.289h669.74a134.36 134.36 0 00133.94-133.938V277.595a134.314 134.314 0 00-133.94-133.938zm33.473 267.877H147.126a33.145 33.145 0 01-33.473-33.473c0-18.752 14.72-33.473 33.473-33.473h736.687c18.752 0 33.472 14.72 33.472 33.473a33.145 33.145 0 01-33.472 33.473z"/>
-        <TextBlock FontSize="13" Foreground="{DynamicResource ColorBrush3}" Margin="0,4,3,0">2025-2-22</TextBlock>
+        <TextBlock FontSize="13" Foreground="{DynamicResource ColorBrush3}" Margin="0,4,3,0">2025-3-18</TextBlock>
         <Path Margin="7,0,4,0" Width="14" Height="14" Fill="{DynamicResource ColorBrush4}"
               Stretch="Uniform"
               Data="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/>
         <Border CornerRadius="4" Background="{DynamicResource ColorBrush6}" Margin="2">
-            <local:MyTextButton Margin="4,1" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/releases/tag/2.9.1">原更新日志</local:MyTextButton>
+            <local:MyTextButton Margin="4,1" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/releases/tag/2.9.2">原更新日志</local:MyTextButton>
         </Border>
         <Path Margin="7,0,4,-1" Width="14" Height="14" Fill="{DynamicResource ColorBrush4}"
               Stretch="Uniform"
               Data="M939.902 458.563L910.17 144.567c-1.507-16.272-14.465-29.13-30.737-30.737L565.438 84.098h-.402c-3.215 0-5.726 1.005-7.634 2.913l-470.39 470.39a10.004 10.004 0 000 14.164l365.423 365.424c1.909 1.908 4.42 2.913 7.132 2.913s5.223-1.005 7.132-2.913l470.39-470.39c2.01-2.11 3.014-5.023 2.813-7.932zM363.165 442.903c-34.346-34.346-34.346-90.128 0-124.474 34.346-34.346 90.128-34.346 124.474 0 34.346 34.346 34.346 90.128 0 124.474-34.447 34.447-90.228 34.447-124.474 0z"/>
         <Border CornerRadius="4" Background="{DynamicResource ColorBrush6}" Margin="2">
-            <local:MyTextButton Margin="4,1" EventType="弹出窗口" EventData="正式版 | PCL 正式版可永久免费下载使用，无需赞助，也可以用于制作整合包~">正式版</local:MyTextButton>
+            <local:MyTextButton Margin="4,1" EventType="弹出窗口" EventData="Type | Note~">Type</local:MyTextButton>
         </Border>
     </WrapPanel>
     <Line X1="0" X2="100" Stroke="{DynamicResource ColorBrush4}" StrokeThickness="1.2" Stretch="Fill" Margin="8,2"/>
@@ -94,58 +96,92 @@ M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 
 <StackPanel Style="{StaticResource ContentStack}" Margin="0,10,0,-10">
 <Border Style="{StaticResource VersionImageBorder}">
 <Border.Background>
-<ImageBrush ImageSource="https://pic1.imgdb.cn/item/66fde7a30a206445e36ebafe.png" Stretch="UniformToFill" />
+<ImageBrush ImageSource="https://pic1.imgdb.cn/item/66fde7a30a206445e36ebb11.png" Stretch="UniformToFill" />
 </Border.Background>
-<Image Source="https://pic1.imgdb.cn/item/66fde7a30a206445e36ebafe.png" Opacity="0" Stretch="Fill"/>
+<Image Source="https://pic1.imgdb.cn/item/66fde7a30a206445e36ebb11.png" Opacity="0" Stretch="Fill"/>
 
 </Border>
 </StackPanel>
 <FlowDocumentScrollViewer >
 <FlowDocument>
-<Paragraph Style="{StaticResource H1}">全版本同步至2.9.1</Paragraph><Paragraph>正式版也有整合包导出功能啦！</Paragraph><Paragraph Style="{StaticResource H2}">正式版更新：2.8.13 → 2.9.1</Paragraph><Paragraph>2.9.0 更新日志：见文章存档</Paragraph><Paragraph>2.9.1 更新日志：看下面咯！</Paragraph><Paragraph Style="{StaticResource H2}">快照版更新：2.9.0 → 2.9.1</Paragraph><Paragraph Style="{StaticResource H3}">导出功能优化</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">允许导出文件夹形式的光影包，仅对 EuphoriaPatches 进行过滤（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5692">#5692</local:MyTextButton></Underline>，@Hamster1223）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource ColoredListItemPara}" Foreground="Green">添加刷新按钮，可以手动刷新导出内容列表（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5692">#5692</local:MyTextButton></Underline>，@Hamster1223）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">会自动屏蔽 Essential 的账号信息文件（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5694">#5694</local:MyTextButton></Underline>，@XiaoHeiawa）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource ColoredListItemPara}" Foreground="Green">允许通过修改配置文件，将指定的文件复制到压缩包根目录（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5697">#5697</local:MyTextButton></Underline>，@yqs112358）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">若勾选打包资源文件，会禁用 <TextBox Style="{StaticResource InlineCode}">Modrinth</TextBox> 上传模式，而不是隐藏该选项（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5712">#5712</local:MyTextButton></Underline>，@com-in）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">将“导出内容清单”改为“导出内容列表”（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5714">#5714</local:MyTextButton></Underline>，@Chiloven945）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">保存/读取配置文件时，会自动将上一次选择的路径作为默认路径</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">Bug 修复</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource ColoredListItemPara}" Foreground="Red">[严重] 无法进行第三方登录（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5702">#5702</local:MyTextButton></Underline>，@Sniper2711）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">快照版的整合包制作指南会打开正式版的指南内容（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5686">#5686</local:MyTextButton></Underline>，@com-in）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">若资源文件夹名称中存在特定特殊字符，会导致打开导出页面时启动器崩溃（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5687">#5687</local:MyTextButton></Underline>，@w51637382）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">第三方登录时，若在刷新登录时总是失败则会导致死锁（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5618">#5618</local:MyTextButton></Underline>，@mqingxue）</Paragraph></ListItem>
-</List><Paragraph Style="{StaticResource H3}">技术性调整</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">当自定义主页的 <TextBox Style="{StaticResource InlineCode}">Inline</TextBox> 中的内容编写有误时，会展示深层的错误信息，以便排查（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5688">#5688</local:MyTextButton></Underline>，@hhhh17488）</Paragraph></ListItem>
-</List>
+<Section Style="{StaticResource noteQuote}">
+  <Paragraph FontWeight="Bold">
+    注释
+    <Paragraph.Foreground>
+      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
+    </Paragraph.Foreground>
+  </Paragraph>
+  
+<Paragraph>
+作者燃到39°了....好不容易等到退烧把更新搓完了..
+暂时移除历史板块 出了点小问题</Paragraph>
+
+</Section><Paragraph Style="{StaticResource H1}">更新亮点</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource ColoredListItemPara}" Foreground="Orange">Minecraft 会优先使用独立显卡运行（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5845">#5845</local:MyTextButton></Underline>，PR @nanhuajiaren）</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">精简下载新版本第二步的界面</Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://i2.hdslb.com/bfs/article/07241d42c6623dcbe8663398e95b1af811343203.png"/></BlockUIContainer><Paragraph></Paragraph><Paragraph Style="{StaticResource H2}">新的版本隔离策略</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">仅对新的 PCL 用户，版本隔离现在会默认开启</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">新玩家在为多个版本安装 Mod 时经常被版本隔离困扰，在默认开启版本隔离后应该就没有这个问题了</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">老玩家的版本隔离情况不会发生改变（除非出 Bug 了）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">全局版本隔离设置不再产生直接影响，而是在安装新版本时，根据它来一次性地决定新安装的版本是否开启隔离</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">因此，修改全局版本隔离设置不再波及已有版本的隔离情况</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">同样地，若有多个版本隔离设置不一样的 PCL，无论使用哪一个，版本隔离情况也不会变化了</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">你依然可以在版本独立设置中单独修改隔离设置</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">添加了在全局启动设置与版本独立设置之间互相跳转的按钮</Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://i2.hdslb.com/bfs/article/141135d55bdaf0e84631b43af6f5282d11343203.png"/></BlockUIContainer><Paragraph></Paragraph><Paragraph Style="{StaticResource H2}">其他更新内容</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource ColoredListItemPara}" Foreground="Orange">允许在版本设置中禁用 <TextBox Style="{StaticResource InlineCode}">Java Launch Wrapper</TextBox>（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/417">#417</local:MyTextButton></Underline>，@HowardZHY，PR @shimoranla）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">同时在 <TextBox Style="{StaticResource InlineCode}">CurseForge</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">Modrinth</TextBox> 上的 Mod，若最近更新时间相差一周以上，则会同时展示两个平台的选项（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5334">#5334</local:MyTextButton></Underline>，@WinExp）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">现在会显示 <TextBox Style="{StaticResource InlineCode}">CurseForge</TextBox> 中 <TextBox Style="{StaticResource InlineCode}">Mod</TextBox> 的所有版本，而不是只显示最新版（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5522">#5522</local:MyTextButton></Underline>，@jocemod）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">对之后可能提高 <TextBox Style="{StaticResource InlineCode}">Java</TextBox> 版本需求的情况进行向后兼容（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5659">#5659</local:MyTextButton></Underline>，@shimoranla）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource ColoredListItemPara}" Foreground="Orange"><TextBox Style="{StaticResource InlineCode}">OptiFine</TextBox> 将尽量作为 <TextBox Style="{StaticResource InlineCode}">Mod</TextBox> 安装（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5777">#5777</local:MyTextButton></Underline>，PR @shimoranla）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource ColoredListItemPara}" Foreground="Orange"><TextBox Style="{StaticResource InlineCode}">Mod</TextBox> 默认文件名格式添加【】选项（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5826">#5826</local:MyTextButton></Underline>，@EggyPartyMc，PR @Hill23333）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">只对可能出问题的 <TextBox Style="{StaticResource InlineCode}">API</TextBox> 关闭 <TextBox Style="{StaticResource InlineCode}">SSL</TextBox> 证书校验（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5879">#5879</local:MyTextButton></Underline>，@GCVillager）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">更新 2025 年 2 月赞助者列表，感谢大家对 PCL 和伟大的咕咕咕事业的支持！</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">暂时不再使用多线程下载 BMCLAPI 中的同一个文件</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">若 <TextBox Style="{StaticResource InlineCode}">OptiFine</TextBox> 注明兼容某个版本 Forge，改为仅兼容这个版本，不向下兼容</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">只允许在版本独立设置中选择“忽略 Java 兼容性警告”与“关闭文件校验”</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">为“导出整合包配置文件”添加提示条作为教学</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">调整左边栏中页面的名称与图标</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">允许为游戏分配 &gt;32G 的内存</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">Bug 修复</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource ColoredListItemPara}" Foreground="Orange">音频设备断连会导致音乐播放出错（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/480">#480</local:MyTextButton></Underline>，@skittle-wuse，PR @tangge233）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">快速地重新加载联网帮助页面导致出错（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/2576">#2576</local:MyTextButton></Underline>，@kndxhz）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource ColoredListItemPara}" Foreground="Orange">“在结束后开始音乐播放” 可能出错（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/3708">#3708</local:MyTextButton></Underline>，@wuwenjun9939，PR @tangge233）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">打开快照版 PCL 可能报错：初始化 SetupEntry 失败（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/4517">#4517</local:MyTextButton></Underline>，@Immortal-Sty）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource ColoredListItemPara}" Foreground="Orange">崩溃分析与崩溃报告中的汉字可能会乱码（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/4700">#4700</local:MyTextButton></Underline>，@wuxiangzhicao，PR @allMagicNB）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">无法使用 <TextBox Style="{StaticResource InlineCode}">JDK 25+</TextBox>（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5221">#5221</local:MyTextButton></Underline>，@caicai7162）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在更新 Mod 时，没有修改具有特定格式名称的 Mod 的文件名（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5243">#5243</local:MyTextButton></Underline>，@FlameFire26）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">下载时有极小概率出错（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5429">#5429</local:MyTextButton></Underline>，@youzi-3222）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">快照版无法使用长路径（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5584">#5584</local:MyTextButton></Underline>，@Hill23333）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">名称会换行的 Mod 的显示有误（为什么会有作者往 Mod 名字里加换行符？）（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5625">#5625</local:MyTextButton></Underline>，@LightRainStudio）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">自定义 <TextBox Style="{StaticResource InlineCode}">XAML</TextBox> 中无法直接使用 Inlines（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5688">#5688</local:MyTextButton></Underline>，@hhhh17488）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource ColoredListItemPara}" Foreground="Orange">内存预览条可能错误地提示剩余内存不足（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5721">#5721</local:MyTextButton></Underline>，@jjw881，PR @hadesanc1）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">1.21.4+ 安装 <TextBox Style="{StaticResource InlineCode}">OptiFine + Forge</TextBox> 时，<TextBox Style="{StaticResource InlineCode}">OptiFine</TextBox> 无效（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5728">#5728</local:MyTextButton></Underline>，@handsomewubi）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">快照版导出整合包时，下载 <TextBox Style="{StaticResource InlineCode}">PCL</TextBox> 正式版后可能失败（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5745">#5745</local:MyTextButton></Underline>，@zhu427）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">写入 <TextBox Style="{StaticResource InlineCode}">ini</TextBox> 文件时偶发多线程争用异常（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5793">#5793</local:MyTextButton></Underline>，@John-is-playing）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">跨屏幕拖拽快照版 <TextBox Style="{StaticResource InlineCode}">PCL</TextBox> 的窗口时，放大比例可能异常（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5802">#5802</local:MyTextButton></Underline>，@abc05277）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource ColoredListItemPara}" Foreground="Orange">切换版本时，没有重置高级导出选项（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5857">#5857</local:MyTextButton></Underline>，@com-in，PR @shimoranla）</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">无法搜索长路径下的 <TextBox Style="{StaticResource InlineCode}">Java</TextBox></Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在微软登录密码过期时没有要求重新进行登录</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">清理游戏垃圾后，重启 <TextBox Style="{StaticResource InlineCode}">PCL</TextBox> 这一操作可能无效或冲突</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">在运行 <TextBox Style="{StaticResource InlineCode}">OptiFine</TextBox> 安装器时失败会导致缓存文件残留</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">任务缓存文件夹可能不会被清理</Paragraph></ListItem>
+</List><Paragraph Style="{StaticResource H2}">技术性调整</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">为 MyTextBox 和 MyCard 添加了 <TextBox Style="{StaticResource InlineCode}">CornerRadius</TextBox> 属性，用于控制圆角大小</Paragraph></ListItem>
+</List><Section Style="{StaticResource tipQuote}">
+  <Paragraph FontWeight="Bold">
+    提示
+    <Paragraph.Foreground>
+      <Binding Path="BorderBrush" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=Section}" />
+    </Paragraph.Foreground>
+  </Paragraph>
+  
+<Paragraph>
+这次是真的可以使用富文本了 </Paragraph>
+
+</Section>
 </FlowDocument>
 </FlowDocumentScrollViewer>
 </StackPanel>
-</local:MyCard><ContentControl Content="历 史 版 本 " Template="{StaticResource Separator}"/>
-<local:MyCard Title="文章存档" Margin="0,5">
-    <StackPanel Margin="25,40,23,15">
-    <Grid>
-      <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="1*"/>
-        <ColumnDefinition Width="100"/> 
-      </Grid.ColumnDefinitions>
-      <local:MyComboBox x:Name="updatebox" Height="30" SelectedIndex="0">
-        <local:MyComboBoxItem Content="2.8.8"/>
-        <local:MyComboBoxItem Content="2.8.9"/>
-        <local:MyComboBoxItem Content="2.8.10"/>
-        <local:MyComboBoxItem Content="2.8.11"/>
-        <local:MyComboBoxItem Content="2.8.12"/>
-        <local:MyComboBoxItem Content="2.8.13"/>
-        <local:MyComboBoxItem Content="2.9.0"/>
-        <local:MyComboBoxItem Content="2.9.1"/>
-      </local:MyComboBox>
-        <local:MyButton HorizontalAlignment="Center" Width="80"
-            Grid.Column="1" Text="打开→" EventType="打开帮助" 
-            EventData="{Binding Path=Text,ElementName=updatebox,StringFormat=https://pclhomeplazaoss.lingyunawa.top:26994/d/Homepages/Joker2184/VerSave/{0}.json}"/>
-    </Grid>
-    </StackPanel>
-</local:MyCard>
-<ContentControl Content="周 边 新 闻" Template="{StaticResource Separator}"/>
+</local:MyCard><ContentControl Content="周 边 新 闻" Template="{StaticResource Separator}"/>
 <local:MyCard Margin="0,0,0,15">
     <StackPanel Margin="20,14">
         <Grid>
