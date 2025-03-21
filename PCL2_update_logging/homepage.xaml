@@ -11,7 +11,8 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
 <Style TargetType="TextBlock"><Setter Property="TextWrapping" Value="Wrap"/><Setter Property="HorizontalAlignment" Value="Left"/><Setter Property="FontSize" Value="14"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocument"><Setter Property="FontFamily" Value="Microsoft YaHei UI"/><Setter Property="FontSize" Value="14"/><Setter Property="TextAlignment" Value="Left"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush1}"/></Style>
 <Style TargetType="FlowDocumentScrollViewer"><Setter Property="IsSelectionEnabled" Value="False"/><Setter Property="VerticalScrollBarVisibility" Value="Hidden"/><Setter Property="Margin" Value="0"/></Style>
-<Style x:Key="ColoredListItemPara" TargetType="Paragraph"><Setter Property="FontSize" Value="14.5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="LineHeight" Value="10"/><Setter Property="TextIndent" Value="0"/></Style>
+<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
+<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
 <Style  TargetType="TextBox" x:Key="InlineCode">
     <Setter Property="FontSize" Value="14" />
     <Setter Property="IsReadOnly" Value="True" />
@@ -31,14 +32,13 @@ xmlns:local="clr-namespace:PCL;assembly=Plain Craft Launcher 2">
         </Setter.Value>
     </Setter>
 </Style>
-<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
-<Style x:Key="tipQuote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="#44AA55"/><Setter Property="Padding" Value="10,5"/><Setter Property="Margin" Value="0,5"/><Setter Property="Background" Value="#3344AA55"/></Style>
+<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
 <sys:String   x:Key="GithubIcon">
 M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 0 0 363.52 938.666667c23.466667 4.266667 32-9.813333 32-22.186667v-78.08c-130.56 27.733333-158.293333-61.44-158.293333-61.44a122.026667 122.026667 0 0 0-52.053334-67.413333c-42.666667-28.16 3.413333-27.733333 3.413334-27.733334a98.56 98.56 0 0 1 71.68 47.36 101.12 101.12 0 0 0 136.533333 37.973334 99.413333 99.413333 0 0 1 29.866667-61.44c-104.106667-11.52-213.333333-50.773333-213.333334-226.986667a177.066667 177.066667 0 0 1 47.36-124.16 161.28 161.28 0 0 1 4.693334-121.173333s39.68-12.373333 128 46.933333a455.68 455.68 0 0 1 234.666666 0c89.6-59.306667 128-46.933333 128-46.933333a161.28 161.28 0 0 1 4.693334 121.173333A177.066667 177.066667 0 0 1 810.666667 477.866667c0 176.64-110.08 215.466667-213.333334 226.986666a106.666667 106.666667 0 0 1 32 85.333334v125.866666c0 14.933333 8.533333 26.88 32 22.186667A460.8 460.8 0 0 0 981.333333 502.186667 464.64 464.64 0 0 0 512 42.666667</sys:String>
-<Style x:Key="H2" TargetType="Paragraph"><Setter Property="FontSize" Value="22"/><Setter Property="Margin" Value="0,10,0,5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush3}"/></Style>
-<Style x:Key="Card" TargetType="local:MyCard"><Setter Property="Margin" Value="0,5"/></Style>
+<Style x:Key="H3" TargetType="Paragraph"><Setter Property="FontSize" Value="18"/><Setter Property="Margin" Value="0,10,0,3"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Foreground" Value="{DynamicResource ColorBrush4}"/></Style>
 <Style x:Key="Lp" TargetType="Paragraph"><Setter Property="LineHeight" Value="16"/><Setter Property="TextIndent" Value="0"/></Style>
 <Style x:Key="ContentStack" TargetType="StackPanel"><Setter Property="Margin" Value="20,40,20,20"/></Style>
+<Style x:Key="ColoredListItemPara" TargetType="Paragraph"><Setter Property="FontSize" Value="14.5"/><Setter Property="FontWeight" Value="Bold"/><Setter Property="Margin" Value="0,10,0,10"/><Setter Property="LineHeight" Value="10"/><Setter Property="TextIndent" Value="0"/></Style>
 <ControlTemplate  x:Key="Separator" TargetType="ContentControl">
   <Grid Margin="0,10">
     <Grid.ColumnDefinitions>
@@ -52,7 +52,7 @@ M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 
   </Grid>
 </ControlTemplate>
 <Style x:Key="VersionImageBorder" TargetType="Border"><Setter Property="HorizontalAlignment" Value="Center"/><Setter Property="BorderThickness" Value="4"/><Setter Property="VerticalAlignment" Value="Top"/><Setter Property="BorderBrush" Value="{DynamicResource ColorBrush3}"/><Setter Property="CornerRadius" Value="7"/></Style>
-<Style x:Key="InnerImage" TargetType="Image"><Setter Property="MaxHeight" Value="500"/><Setter Property="HorizontalAlignment" Value="Center"/></Style>
+<Style x:Key="tipQuote" TargetType="Section"><Setter Property="BorderThickness" Value="5,0,0,0"/><Setter Property="BorderBrush" Value="#44AA55"/><Setter Property="Padding" Value="10,5"/><Setter Property="Margin" Value="0,5"/><Setter Property="Background" Value="#3344AA55"/></Style>
 
 </StackPanel.Resources>
 <local:MyCard Title="📰 2.9.2" CanSwap="True" IsSwaped="False" Style="{StaticResource Card}" >
@@ -104,20 +104,23 @@ M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 
 <FlowDocumentScrollViewer >
 <FlowDocument>
 <Paragraph Style="{StaticResource H3}">主页作者的备注</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">为什么晚更新三天这件事</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">发烧了..39°</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">没看到更新日志.....</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">暂时移除历史板块 写炸了（）</Paragraph></ListItem>
+<ListItem><Paragraph>为什么晚更新这件事</Paragraph><List>
+<ListItem><Paragraph Style="{StaticResource Lp}">首先....发烧了</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">然后更新了没看到...</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph>暂时移除历史板块 写炸了（）</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H2}">更新亮点</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource ColoredListItemPara}" Foreground="Orange">Minecraft 会优先使用独立显卡运行（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5845">#5845</local:MyTextButton></Underline>，PR @nanhuajiaren）</Paragraph></ListItem>
 </List><Paragraph Style="{StaticResource H3}">精简下载新版本第二步的界面</Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://i2.hdslb.com/bfs/article/07241d42c6623dcbe8663398e95b1af811343203.png"/></BlockUIContainer><Paragraph></Paragraph><Paragraph Style="{StaticResource H3}">新的版本隔离策略</Paragraph><List>
-<ListItem><Paragraph Style="{StaticResource Lp}">仅对新的 PCL 用户，版本隔离现在会默认开启</Paragraph></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">仅对新的 PCL 用户，版本隔离现在会默认开启</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">新玩家在为多个版本安装 Mod 时经常被版本隔离困扰，在默认开启版本隔离后应该就没有这个问题了</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">老玩家的版本隔离情况不会发生改变（除非出 Bug 了）</Paragraph></ListItem>
-<ListItem><Paragraph Style="{StaticResource Lp}">全局版本隔离设置不再产生直接影响，而是在安装新版本时，根据它来一次性地决定新安装的版本是否开启隔离</Paragraph></ListItem>
+</List></ListItem>
+<ListItem><Paragraph Style="{StaticResource Lp}">全局版本隔离设置不再产生直接影响，而是在安装新版本时，根据它来一次性地决定新安装的版本是否开启隔离</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource Lp}">因此，修改全局版本隔离设置不再波及已有版本的隔离情况</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">同样地，若有多个版本隔离设置不一样的 PCL，无论使用哪一个，版本隔离情况也不会变化了</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">你依然可以在版本独立设置中单独修改隔离设置</Paragraph></ListItem>
+</List></ListItem>
 </List><Paragraph Style="{StaticResource H3}">添加了在全局启动设置与版本独立设置之间互相跳转的按钮</Paragraph><Paragraph></Paragraph><BlockUIContainer><local:MyImage Style="{StaticResource InnerImage}" Source="https://i2.hdslb.com/bfs/article/141135d55bdaf0e84631b43af6f5282d11343203.png"/></BlockUIContainer><Paragraph></Paragraph><Paragraph Style="{StaticResource H3}">其他更新内容</Paragraph><List>
 <ListItem><Paragraph Style="{StaticResource ColoredListItemPara}" Foreground="Orange">允许在版本设置中禁用 <TextBox Style="{StaticResource InlineCode}">Java Launch Wrapper</TextBox>（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/417">#417</local:MyTextButton></Underline>，@HowardZHY，PR @shimoranla）</Paragraph></ListItem>
 <ListItem><Paragraph Style="{StaticResource Lp}">同时在 <TextBox Style="{StaticResource InlineCode}">CurseForge</TextBox> 和 <TextBox Style="{StaticResource InlineCode}">Modrinth</TextBox> 上的 Mod，若最近更新时间相差一周以上，则会同时展示两个平台的选项（<Underline><local:MyTextButton Margin="0,0,0,-3" EventType="打开网页" EventData="https://github.com/Hex-Dragon/PCL2/issues/5334">#5334</local:MyTextButton></Underline>，@WinExp）</Paragraph></ListItem>
